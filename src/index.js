@@ -8,7 +8,7 @@ import {
 import './reset.scss';
 import './index.scss';
 import Home from './Route/Home';
-import Game from './Route/Game';
+import GamePage from './Route/GamePage';
 import Instructions from './Route/Instructions';
 import AboutUs from './Route/AboutUs';
 import Header from './Component/Header';
@@ -21,7 +21,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/game" element={<Game />} />
+        <Route path="/game" element={<GamePage />} />
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Routes>
