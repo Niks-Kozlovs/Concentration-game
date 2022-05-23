@@ -1,8 +1,8 @@
 function Instructions() {
     return (
-      <div>
+      <main>
         Instructions
-      </div>
+      </main>
     );
   }
 

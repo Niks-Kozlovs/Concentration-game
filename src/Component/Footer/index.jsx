@@ -1,8 +1,11 @@
+import './style.scss';
+
 function Footer() {
     return (
-      <div>
-        Footer
-      </div>
+      <footer>
+        <p>V 1.0.0</p>
+        <sub>© 2022 Niks Kozlovs, All rights reserved</sub>
+      </footer>
     );
   }
   

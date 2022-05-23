@@ -4,13 +4,15 @@
 
 header {
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 0;
     height: var(--header-height);
-    background-color: var(--light);
+    background-color: var(--primary);
 
     nav {
-        background: linear-gradient(-50deg,#00b3ff, #00606f);
+        background: linear-gradient(var(--primary), var(--primary-darker));
         position: absolute;
+        z-index: 100;
         text-align: center;
         top: var(--header-height);
         height: calc(100vh - var(--header-height));

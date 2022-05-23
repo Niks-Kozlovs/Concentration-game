@@ -1,8 +1,8 @@
 function AboutUs() {
     return (
-      <div>
+      <main>
         About us
-      </div>
+      </main>
     );
   }
 
