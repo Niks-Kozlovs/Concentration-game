@@ -1,0 +1,16 @@
+:root {
+    --primary: #0070f3;
+    --primary-lighter: #00a0ff;
+    --primary-darker: #004080;
+    --light: #f8f8f8;
+    --dark: #101010;
+}
+
+* {
+    font-family: 'Fira sans', sans-serif;
+}
+
+#root {
+    overflow-x: hidden;
+    height: 100vh;
+}

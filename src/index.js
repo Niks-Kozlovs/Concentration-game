@@ -17,15 +17,16 @@ import Footer from './Component/Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
     <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/game" element={<Game/>} />
-        <Route path="/instructions" element={<Instructions/>} />
-        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
+      <Footer />
     </Router>
-    <Footer />
+
   </React.StrictMode>
 );

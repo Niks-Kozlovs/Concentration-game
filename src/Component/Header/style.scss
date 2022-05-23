@@ -1,0 +1,49 @@
+:root {
+    --header-height: 50px;
+}
+
+header {
+    display: flex;
+    position: relative;
+    height: var(--header-height);
+    background-color: var(--light);
+
+    nav {
+        background: linear-gradient(-50deg,#00b3ff, #00606f);
+        position: absolute;
+        text-align: center;
+        top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+
+        a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--primary-darker);
+            }
+        }
+
+        .active {
+            color: var(--primary-darker);
+        }
+    }
+
+    nav.open {
+        transform: translateX(0);
+    }
+}
+
