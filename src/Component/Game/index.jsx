@@ -39,6 +39,7 @@ function Game({ children }) {
   const [cards, setCards] = useState([]);
   const [hiddenCards, setHiddenCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
+  const [score, setScore] = useState(0);
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -51,6 +52,7 @@ function Game({ children }) {
 
   useEffect(() => {
     if (flippedCards.length === 2) {
+      setScore(score+1);
       timerRef.current = setTimeout(() => {
         validateCards();
       }, 1000);
@@ -88,30 +90,34 @@ function Game({ children }) {
 
   if (hiddenCards.length === cards.length) {
     return (
-      <div className="Game">
+      <div className="WinScreen">
         <h1>You won!</h1>
         <button onClick={
           () => {
+            setScore(0);
             setCards(shuffle(cards));
             setHiddenCards([]);
             setFlippedCards([]);
           }
-        }>Try again!</button>
+        }>Try again?</button>
       </div>
     );
   }
 
   return (
     <div className='Game'>
-      {cards.map((card, index) => (
-        <GameCard
-          key={card.id}
-          onToggleFlip={() => handleClick(index)}
-          flipped={flippedCards.includes(index)}
-          hidden={hiddenCards.includes(index)}
-        >
-          {card.Elem()}
-        </GameCard>))}
+      <div className='Game-Cards'>
+        {cards.map((card, index) => (
+          <GameCard
+            key={card.id}
+            onToggleFlip={() => handleClick(index)}
+            flipped={flippedCards.includes(index)}
+            hidden={hiddenCards.includes(index)}
+          >
+            {card.Elem()}
+          </GameCard>))}
+      </div>
+      <h2>Moves: {score}</h2>
     </div>
   );
 }

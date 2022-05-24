@@ -8,6 +8,7 @@ header {
     top: 0;
     height: var(--header-height);
     background-color: var(--primary);
+    z-index: 999;
 
     nav {
         background: linear-gradient(var(--primary), var(--primary-darker));

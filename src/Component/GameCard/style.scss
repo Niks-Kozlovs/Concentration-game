@@ -1,12 +1,73 @@
 .GameCard {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 50px;
+    height: 120px;
+    background: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+    perspective: 1000px;
+    border: none;
 
-    &.flipped {
-        background-color: red;
+
+    @media (min-width: 1024px) {
+        height: 238px;
     }
 
     &.hidden {
-        background-color: green;
+        opacity: 0;
+
+        .GameCard-Inner {
+            // Keep it flipped when it dissapears
+            transform: rotateY(180deg);
+        }
     }
+
+    &-Inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        position: relative;
+
+        & > * {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            overflow: hidden;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        &.flipped {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &-Front {
+        background-image: linear-gradient(to bottom right, var(--primary), var(--primary-darker));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-Back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light);
+        transform: rotateY(180deg);
+    }
+}
+
+.WinScreen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    height: 100%;
+    justify-content: center;
 }
