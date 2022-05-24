@@ -70,4 +70,9 @@
     margin-bottom:auto;
     height: 100%;
     justify-content: center;
+
+    p, h1 {
+        margin: 0;
+        text-align: center;
+    }
 }

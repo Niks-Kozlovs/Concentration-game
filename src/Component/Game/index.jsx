@@ -91,7 +91,10 @@ function Game({ children }) {
   if (hiddenCards.length === cards.length) {
     return (
       <div className="WinScreen">
-        <h1>You won!</h1>
+        <div>
+          <h1>You won!</h1>
+          <p>It took {score} moves</p>
+        </div>
         <button onClick={
           () => {
             setScore(0);
