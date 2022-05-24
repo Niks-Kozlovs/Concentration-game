@@ -108,8 +108,8 @@ function Game({ children }) {
   }
 
   return (
-    <div className='Game'>
-      <div className='Game-Cards'>
+    <>
+      <div className='Game'>
         {cards.map((card, index) => (
           <GameCard
             key={card.id}
@@ -121,7 +121,7 @@ function Game({ children }) {
           </GameCard>))}
       </div>
       <h2>Moves: {score}</h2>
-    </div>
+    </>
   );
 }
 
