@@ -8,7 +8,11 @@
     transition: opacity 0.5s;
     perspective: 1000px;
     border: none;
+    transition: transform 0.5s;
 
+    &:hover {
+        transform: scale(1.1);
+    }
 
     @media (min-width: 1024px) {
         height: 238px;

@@ -10,6 +10,12 @@ header {
     background-color: var(--primary);
     z-index: 999;
 
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+        --header-height: 100px;
+        align-items: center;
+    }
+
     nav {
         background: linear-gradient(var(--primary), var(--primary-darker));
         position: absolute;
@@ -23,6 +29,14 @@ header {
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
+
+        @media screen and (min-width: 768px) {
+            position: static;
+            height: initial;
+            flex-direction: row;
+            background: none;
+            transform: none;
+        }
 
         a {
             display: block;
@@ -49,4 +63,3 @@ header {
         transform: translateX(0);
     }
 }
-

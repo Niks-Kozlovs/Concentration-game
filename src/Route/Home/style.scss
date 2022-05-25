@@ -24,8 +24,15 @@
         padding: 1rem;
         margin: 1rem;
         border-radius: 10px;
-        border: solid 3px var(--primary);
+        outline: solid 3px var(--primary);
         background-color: var(--primary-darker);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--light);
+            outline-offset: 4px;
+        }
     }
 
     .buttons {

@@ -2,6 +2,7 @@
     --primary: #0070f3;
     --primary-lighter: #00a0ff;
     --primary-darker: #004080;
+    --secondary: #faaa71;
     --light: #f8f8f8;
     --dark: #101010;
 }
@@ -17,5 +18,5 @@
 
 main {
     padding: 10px;
-    height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
 }
